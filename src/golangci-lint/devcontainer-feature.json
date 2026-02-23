@@ -1,0 +1,15 @@
+{
+  "id": "golangci-lint",
+  "version": "1.0.0",
+  "name": "golangci-lint",
+  "description": "Install golangci-lint from GitHub release",
+  "documentationURL": "https://golangci-lint.run",
+  "licenseURL": "https://github.com/golangci/golangci-lint/blob/master/LICENSE",
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "golangci-lint version to install (e.g., v2.10.1). Defaults to latest.",
+      "default": "latest"
+    }
+  }
+}
