@@ -3,6 +3,9 @@ set -e
 
 echo "Installing Go..."
 
+# Get version from argument or default to latest
+VERSION="${VERSION:-latest}"
+
 # Detect architecture
 ARCH=$(uname -m)
 case $ARCH in
@@ -18,8 +21,12 @@ aarch64)
 	;;
 esac
 
-# Get latest Go version from official releases page
-GO_VERSION=$(curl -s https://go.dev/dl/ | grep -oP 'go[0-9]+\.[0-9]+\.[0-9]+' | head -1 | sed 's/go//')
+# Get Go version
+if [ "$VERSION" = "latest" ]; then
+	GO_VERSION=$(curl -s https://go.dev/dl/ | grep -oP 'go[0-9]+\.[0-9]+\.[0-9]+' | head -1 | sed 's/go//')
+else
+	GO_VERSION="$VERSION"
+fi
 GO_URL="https://go.dev/dl/go${GO_VERSION}.linux-${GO_ARCH}.tar.gz"
 
 # Download and install Go
