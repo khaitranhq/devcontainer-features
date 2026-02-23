@@ -37,8 +37,7 @@ tar -C /usr/local -xzf go.tar.gz
 rm go.tar.gz
 
 # Add Go to PATH
-echo "export PATH=/usr/local/go/bin:\$PATH" >>/etc/profile.d/go.sh
-export PATH=/usr/local/go/bin:$PATH
+ln -sf /usr/local/go/bin/go /usr/local/bin/go
 
 echo "Go installation completed"
 go version
