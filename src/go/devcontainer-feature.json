@@ -1,6 +1,6 @@
 {
   "id": "go",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "Go",
   "description": "Install Go programming language",
   "documentationURL": "https://golang.org",

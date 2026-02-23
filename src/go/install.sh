@@ -54,6 +54,7 @@ if [ -n "$PACKAGES" ]; then
 		if [ -n "$package" ]; then
 			echo "Installing: $package"
 			go install "$package"
+			ln -sf "$(go env GOPATH)"/bin/$(basename "$package") /usr/local/bin/$(basename "$package")
 		fi
 	done
 	echo "Package installation completed"
