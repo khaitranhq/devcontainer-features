@@ -10,16 +10,16 @@ fi
 
 echo "Installing Go packages: $PACKAGES"
 
-# Ensure Go is available
-if ! command -v go &>/dev/null; then
-	echo "Go is not installed. Please install Go first."
+# Ensure /usr/local/bin/go is available
+if ! command -v /usr/local/bin/go &>/dev/null; then
+	echo "Go binary not found at /usr/local/bin/go. Please install Go first."
 	exit 1
 fi
 
 # Install each package
 for package in $PACKAGES; do
 	echo "Installing $package..."
-	go install "$package"@latest
+	/usr/local/bin/go install "$package"@latest
 done
 
 echo "Go packages installation completed"

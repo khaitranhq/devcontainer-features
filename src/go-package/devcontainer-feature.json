@@ -1,6 +1,6 @@
 {
   "id": "go-package",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "Go Package",
   "description": "Install Go packages using go install",
   "documentationURL": "https://golang.org/cmd/go/#hdr-Install_packages_and_dependencies",
