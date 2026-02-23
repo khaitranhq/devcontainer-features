@@ -1,6 +1,6 @@
 {
   "id": "go",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "name": "Go",
   "description": "Install Go programming language",
   "documentationURL": "https://golang.org",
@@ -10,6 +10,11 @@
       "type": "string",
       "description": "Go version to install (e.g., 1.23.0). Defaults to latest.",
       "default": "latest"
+    },
+    "packages": {
+      "type": "string",
+      "description": "Comma-separated list of Go packages to install via 'go install' (e.g., github.com/golangci/golangci-lint/cmd/golangci-lint@latest)",
+      "default": ""
     }
   }
 }

@@ -41,3 +41,20 @@ ln -sf /usr/local/go/bin/go /usr/local/bin/go
 
 echo "Go installation completed"
 go version
+
+# Install packages if specified
+PACKAGES="${PACKAGES:-}"
+if [ -n "$PACKAGES" ]; then
+	echo "Installing Go packages..."
+	# Split comma-separated packages and install each one
+	IFS=',' read -ra PACKAGE_ARRAY <<<"$PACKAGES"
+	for package in "${PACKAGE_ARRAY[@]}"; do
+		# Trim whitespace
+		package=$(echo "$package" | xargs)
+		if [ -n "$package" ]; then
+			echo "Installing: $package"
+			go install "$package"
+		fi
+	done
+	echo "Package installation completed"
+fi
