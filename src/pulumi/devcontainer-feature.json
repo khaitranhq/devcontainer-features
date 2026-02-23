@@ -1,0 +1,15 @@
+{
+  "id": "pulumi",
+  "version": "1.0.0",
+  "name": "Pulumi",
+  "description": "Install Pulumi infrastructure as code framework",
+  "documentationURL": "https://www.pulumi.com/docs/",
+  "licenseURL": "https://github.com/pulumi/pulumi/blob/master/LICENSE",
+  "options": {
+    "version": {
+      "type": "string",
+      "description": "Pulumi version to install (e.g., '3.100.0', 'latest')",
+      "default": "latest"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "go",
+  "version": "1.0.0",
+  "name": "Go",
+  "description": "Install Go programming language",
+  "documentationURL": "https://golang.org",
+  "licenseURL": "https://github.com/golang/go/blob/master/LICENSE",
+  "options": {}
+}
